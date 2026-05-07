@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - سوق</title>
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .product-details-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 3rem 0; background: #fff; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); }
+        .product-gallery img { width: 100%; border-radius: 8px; border: 1px solid var(--border-color); height: auto; object-fit: cover; }
+        .product-info h1 { font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem; }
+        .product-info .company-name { font-size: 1.1rem; color: var(--text-light); margin-bottom: 1.5rem; }
+        .product-info .price { font-size: 2rem; font-weight: bold; color: var(--text-color); margin-bottom: 1.5rem; }
+        .product-info .description { color: var(--text-color); line-height: 1.8; margin-bottom: 2rem; }
+        .add-to-cart-box { display: flex; gap: 1rem; align-items: center; border-top: 1px solid var(--border-color); padding-top: 2rem; }
+        .quantity-selector { display: flex; align-items: center; border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden; }
+        .quantity-selector button { padding: 0.75rem 1rem; background: var(--bg-color); border: none; cursor: pointer; font-size: 1.2rem; }
+        .quantity-selector input { width: 50px; text-align: center; border: none; font-size: 1.1rem; font-weight: bold; border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); }
+        .btn-add { flex: 1; padding: 1rem; background: var(--primary-color); color: #fff; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 1.1rem; }
+        .btn-add:hover { opacity: 0.9; }
+        @media (max-width: 768px) { .product-details-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="">
+    <!-- Header -->
+    <header class="top-bar">
+        <div class="container">
+             <div class="header-left">
+                 <a href="../index.html" class="logo">سوق</a>
+             </div>
+             <div class="header-right">
+                 <nav class="nav-menu">
+                     <ul>
+                         <li><a href="../index.html">الرئيسية</a></li>
+                         <li><a href="../index.html#products-section">المنتجات</a></li>
+                     </ul>
+                 </nav>
+                 <div class="header-actions">
+                     <a href="cart.html" class="action-link"><i class="fas fa-shopping-cart"></i></a>
+                 </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product-details-container">
+            <div class="product-gallery">
+                <img src="../assets/images/default-product.jpg" alt="طقم أنتريه">
+            </div>
+            
+            <div class="product-info">
+                <h1>طقم أنتريه مودرن فاخر</h1>
+                <div class="company-name"><i class="fas fa-building"></i> شركة الدمياطي للأثاث</div>
+                
+                <div class="price">12,500.00 ج.م</div>
+                
+                <div class="description">
+                    <p>طقم أنتريه مودرن بتصميم عصري وألوان متناسقة تناسب جميع الديكورات الحديثة. مصنوع من أجود أنواع الأخشاب الطبيعية والإسفنج عالي الكثافة لضمان الراحة التامة والمتانة. يتكون الطقم من كنبة 3 مقاعد، كنبة 2 مقعد، و2 فوتيه.</p>
+                </div>
+                
+                <div class="add-to-cart-box">
+                    <div class="quantity-selector">
+                        <button>-</button>
+                        <input type="text" value="1" readonly>
+                        <button>+</button>
+                    </div>
+                    <button class="btn-add"><i class="fas fa-cart-plus"></i> إضافة إلى السلة</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="text-align: center; padding: 1.5rem; background: var(--card-bg);">
+        <p>© 2026 سوق. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

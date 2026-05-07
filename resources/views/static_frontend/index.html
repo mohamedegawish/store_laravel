@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوق | متجر إلكتروني عصري</title>
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#4A3AFF">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="">
+
+    <a href="#main-content" class="sr-only">تخطي إلى المحتوى الرئيسي</a>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
+    <!-- Mobile Sidebar -->
+    <aside class="sidebar-mobile" id="mobile-sidebar" aria-hidden="true">
+         <div class="sidebar-mobile-header">
+             <a href="index.html" class="logo">سوق</a>
+             <button class="close-sidebar-btn" id="close-sidebar-btn" aria-label="إغلاق القائمة"><i class="fas fa-times"></i></button>
+         </div>
+         <nav class="sidebar-mobile-nav" aria-label="Mobile Navigation">
+              <ul>
+                  <li><a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                  <li><a href="index.html#products-section"><i class="fas fa-box-open"></i> كل المنتجات</a></li>
+                  <li><a href="pages/cart.html"><i class="fas fa-shopping-cart"></i> السلة</a></li> 
+                  <li><a href="pages/orders.html"><i class="fas fa-receipt"></i> طلباتي</a></li>
+                  <li><a href="#contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+             </ul>
+         </nav>
+          <div class="mobile-sidebar-actions">
+               <a href="pages/login.html" class="button button-primary">تسجيل الدخول</a>
+               <a href="pages/register.html" class="button button-outline">إنشاء حساب</a>
+         </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="top-bar" role="banner">
+        <div class="container">
+             <div class="header-left">
+                 <button class="hamburger" id="hamburger-btn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-sidebar">
+                     <i class="fas fa-bars"></i>
+                 </button>
+                 <a href="index.html" class="logo" aria-label="الصفحة الرئيسية للمتجر">
+                     <!-- Replace with assets/images if available -->
+                     سـوق
+                 </a>
+             </div>
+
+             <div class="header-center">
+                <form class="search-bar" method="GET" action="index.html#products-section" role="search" aria-label="البحث في المتجر">
+                    <input type="search" name="search" id="search-input"
+                           placeholder="ابحث عن المنتجات، الماركات..."
+                           value=""
+                           aria-label="ابحث في المتجر"
+                           autocomplete="off">
+                    <button class="search-button" type="submit" aria-label="إرسال البحث"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+             </div>
+
+            <div class="header-right">
+                 <nav class="nav-menu" aria-label="القائمة الرئيسية">
+                     <ul>
+                         <li><a href="index.html#home">الرئيسية</a></li>
+                         <li><a href="index.html#products-section">المنتجات</a></li>
+                         <li><a href="pages/orders.html">طلباتي</a></li>
+                         <li><a href="#contact">اتصل بنا</a></li>
+                     </ul>
+                 </nav>
+                 <div class="header-actions">
+                        <a href="pages/login.html" class="button button-primary">دخول</a>
+                        <a href="pages/register.html" class="button button-outline">حساب جديد</a>
+                     <div class="cart-icon-wrapper">
+                         <a href="pages/cart.html" class="action-link cart-icon" id="cart-icon-button"
+                                 aria-label="سلة التسوق" aria-haspopup="dialog" aria-expanded="false" aria-controls="miniCartPopup">
+                             <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                             <span class="cart-count" id="cart-item-count" aria-label="عدد المنتجات في السلة">0</span>
+                         </a>
+                    </div>
+                 </div>
+             </div>
+        </div>
+    </header>
+
+    <div class="page-wrapper container">
+        <aside class="sidebar" id="sidebar-desktop" aria-labelledby="desktop-sidebar-title">
+             <h2 id="desktop-sidebar-title" class="sr-only">تصنيفات المنتجات</h2>
+             <div class="sidebar-section">
+                 <h3 id="cat-filter-title" data-toggle="collapse" aria-expanded="true" aria-controls="cat-items">الفئات <i class="fas fa-chevron-down"></i></h3>
+                 <div class="sidebar-items" id="cat-items" role="region" aria-labelledby="cat-filter-title">
+                     <a href="#" class="sidebar-item active">كل الفئات</a>
+                     <a href="#" class="sidebar-item">أثاث منزلي</a>
+                     <a href="#" class="sidebar-item">أجهزة كهربائية</a>
+                     <a href="#" class="sidebar-item">مفروشات</a>
+                 </div>
+             </div>
+             <div class="sidebar-section">
+                 <h3 id="comp-filter-title" data-toggle="collapse" aria-expanded="true" aria-controls="comp-items">العلامات التجارية <i class="fas fa-chevron-down"></i></h3>
+                 <div class="sidebar-items" id="comp-items" role="region" aria-labelledby="comp-filter-title">
+                     <a href="#" class="sidebar-item active">كل الشركات</a>
+                     <a href="#" class="sidebar-item">الدمياطي</a>
+                     <a href="#" class="sidebar-item">الهلب</a>
+                     <a href="#" class="sidebar-item">شومان</a>
+                 </div>
+             </div>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            <section class="hero-section" id="home" aria-labelledby="hero-title">
+                <h1 id="hero-title">اكتشف منتجات دمياط الجديدة</h1>
+                <h2>تحت رعاية جمعية مستثمرى دمياط الجديدة - جودة وتميز</h2>
+                <a href="#products-section" class="button button-secondary">تسوق الآن <i class="fas fa-arrow-left"></i></a>
+            </section>
+
+            <section class="section" id="products-section" aria-labelledby="products-title">
+                <h2 class="section-title" id="products-title">المنتجات المميزة</h2>
+
+                <div class="product-grid" id="product-grid">
+                    <!-- Dummy Product 1 -->
+                    <div class="product-card">
+                        <a href="pages/product_details.html" class="product-image-link">
+                            <img src="assets/images/default-product.jpg" alt="طقم أنتريه" class="product-image" loading="lazy" width="230" height="220" style="object-fit: cover; background: #eee;">
+                        </a>
+                        <div class="product-info">
+                            <h3><a href="pages/product_details.html">طقم أنتريه مودرن</a></h3>
+                            <div class="product-price">12,500.00</div>
+                            <div class="product-meta">
+                                <p><i class="fas fa-building fa-fw"></i> شركة الدمياطي</p>
+                            </div>
+                            <button type="button" class="button button-primary add-to-cart-button">
+                                <i class="fas fa-cart-plus"></i> إضافة للسلة
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dummy Product 2 -->
+                    <div class="product-card">
+                        <a href="pages/product_details.html" class="product-image-link">
+                            <img src="assets/images/default-product.jpg" alt="غرفة نوم رئيسية" class="product-image" loading="lazy" width="230" height="220" style="object-fit: cover; background: #eee;">
+                        </a>
+                        <div class="product-info">
+                            <h3><a href="pages/product_details.html">غرفة نوم رئيسية كلاسيك</a></h3>
+                            <div class="product-price">25,000.00</div>
+                            <div class="product-meta">
+                                <p><i class="fas fa-building fa-fw"></i> شركة شومان</p>
+                            </div>
+                            <button type="button" class="button button-primary add-to-cart-button">
+                                <i class="fas fa-cart-plus"></i> إضافة للسلة
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dummy Product 3 -->
+                    <div class="product-card">
+                        <a href="pages/product_details.html" class="product-image-link">
+                            <img src="assets/images/default-product.jpg" alt="طقم سفرة 6 كراسي" class="product-image" loading="lazy" width="230" height="220" style="object-fit: cover; background: #eee;">
+                        </a>
+                        <div class="product-info">
+                            <h3><a href="pages/product_details.html">طقم سفرة 6 كراسي خشب أرو</a></h3>
+                            <div class="product-price">18,200.00</div>
+                            <div class="product-meta">
+                                <p><i class="fas fa-building fa-fw"></i> مصنع الهلب للأثاث</p>
+                            </div>
+                            <button type="button" class="button button-primary add-to-cart-button">
+                                <i class="fas fa-cart-plus"></i> إضافة للسلة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p style="color: var(--text-light); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; text-align: center;">هل لديك أي استفسارات أو اقتراحات؟ فريق خدمة العملاء لدينا جاهز للمساعدة!</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                     <p><i class="fas fa-envelope" style="color: var(--primary-color); margin-left: 8px;"></i> <a href="mailto:info@souq.test">info@souq.test</a></p>
+                     <p><i class="fas fa-phone" style="color: var(--primary-color); margin-left: 8px;"></i> <a href="tel:9200XXXXX">9200XXXXX</a></p>
+                     <p><i class="fab fa-whatsapp" style="color: var(--secondary-color2); margin-left: 8px;"></i> <a href="#" target="_blank" rel="noopener noreferrer">تواصل عبر واتساب</a></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="text-align: center; padding: 1.5rem; background: var(--card-bg); margin-top: auto;">
+        <p>© 2026 سوق (تحت رعاية جمعية مستثمري دمياط الجديدة). جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- Core JS -->
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

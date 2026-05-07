@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عربة التسوق - سوق</title>
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Added cart specific fix style if necessary -->
+    <style>
+        .cart-container { margin-top: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .cart-container h2 { text-align: center; margin-bottom: var(--spacing-xl); font-weight: var(--font-weight-bold); }
+        .cart-item { display: flex; align-items: center; padding: var(--spacing-md); border-bottom: 1px solid var(--border-color); gap: var(--spacing-md); background: #fff; margin-bottom: 1rem; border-radius: 8px; }
+        .cart-item-image img { width: 90px; height: 90px; object-fit: contain; }
+        .cart-item-details { flex-grow: 1; }
+        .cart-item-total { font-weight: bold; color: var(--primary-color); min-width: 120px; }
+        .cart-summary { background-color: #fff; border-radius: 8px; padding: 1.5rem; max-width: 450px; margin: 2rem auto; border: 1px solid var(--border-color); }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+        .total-row { font-weight: bold; font-size: 1.25rem; border-top: 1px solid var(--border-color); padding-top: 1rem; }
+        .checkout-btn { width: 100%; margin-top: 1.5rem; padding: 1rem; background: var(--secondary-color); color: #fff; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body class="">
+    <!-- Header -->
+    <header class="top-bar" role="banner">
+        <div class="container">
+             <div class="header-left">
+                 <a href="../index.html" class="logo">سوق</a>
+             </div>
+             <div class="header-center"></div>
+             <div class="header-right">
+                 <nav class="nav-menu">
+                     <ul>
+                         <li><a href="../index.html">الرئيسية</a></li>
+                         <li><a href="../index.html#products-section">المنتجات</a></li>
+                     </ul>
+                 </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container cart-container">
+        <h2>عربة التسوق الخاصة بك</h2>
+
+        <div id="cart-items-container">
+            <!-- Dummy Cart Item 1 -->
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="../assets/images/default-product.jpg" alt="طقم أنتريه">
+                </div>
+                <div class="cart-item-details">
+                    <h3>طقم أنتريه مودرن</h3>
+                    <p class="price">السعر: <strong>12,500.00 ج.م</strong></p>
+                </div>
+                <div class="cart-item-quantity" style="display:flex; align-items:center; gap: 10px;">
+                    <button class="button button-outline" style="padding: 5px 10px;">-</button>
+                    <span>1</span>
+                    <button class="button button-outline" style="padding: 5px 10px;">+</button>
+                </div>
+                <div class="cart-item-total">
+                    12,500.00 ج.م
+                </div>
+                <div class="cart-item-remove">
+                    <button class="button" style="color: red;"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h3>ملخص الطلب</h3>
+            <div class="summary-row">
+                <span>الإجمالي الفرعي:</span>
+                <span>12,500.00 ج.م</span>
+            </div>
+            <div class="summary-row total-row">
+                <span>الإجمالي:</span>
+                <strong>12,500.00 ج.م</strong>
+            </div>
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+               <i class="fas fa-shield-alt"></i> المتابعة للدفع
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer" style="text-align: center; padding: 1.5rem; background: var(--card-bg); margin-top: auto;">
+        <p>© 2026 سوق. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

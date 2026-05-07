@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan *)",
+      "Bash(Start-Sleep -Seconds 3)",
+      "Bash(Start-Sleep -Seconds 4)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:8000/admin\" -UseBasicParsing)",
+      "Bash(Select-Object -First 5)",
+      "PowerShell(Get-Content \"e:\\\\Laravel Projects\\\\store\\\\storage\\\\logs\\\\laravel.log\" -Tail 60 | Select-String -Pattern \"local.ERROR\" | Select-Object -Last 3 | ForEach-Object { $_.Line.Substring\\(0, [Math]::Min\\(300, $_.Line.Length\\)\\) })",
+      "Bash(Get-ChildItem -Path \"e:\\\\Laravel Projects\\\\store\" -Force)",
+      "Bash(Select-Object Name, FullName)"
+    ]
+  }
+}
